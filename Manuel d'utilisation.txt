@@ -1,0 +1,15 @@
+Projet: Mise en place d'une d'une API CRUD en JavaScript avec NodeJS:
+
+Il a 06 fonctionnalités:
+
+ 1- Créer un post,
+ 2- Récupérer un post
+ 3- Modifier un post
+ 4- Supprimer un post
+
+BONUS:
+
+ 5- Liker un post
+ 6- Disliker un post
+
+// Je commenterais ce guide d'utilisation dans les jours à venir, Merci d'avance !
