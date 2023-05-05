@@ -1,0 +1,71 @@
+Def particulières:
+
+Node: C'est le moteur de javascript qui tourne en dehors du navigateur web!
+
+Express: Librairie de node JS permettent de créer des serveurs beaucoup plus facilement.
+
+dotenv: Pour gérer les variables d'environnement.
+
+mongoose: Pour faire le lien avec la bd sur mongoDB.
+
+nodemon: Pour faire des actualisations en live et mieux gérer les erreurs.
+
+
+
+Creation d'une API CRUD en JS:
+
+
+PLAN: 
+
+I- Creer un serveur en utilisant la bibliothèque "Express JS" ( framework pour construire des applications web basées sur Node.js. C'est de fait le framework standard pour le développement de serveur en Node.js ).
+
+II- Creer des routes
+
+III- Creer une base de données (MongoDB dans notre cas est privilégier avec node JS)
+
+IV- Mise en place du CRUD 
+
+BONUS: On va rajouter une feature pour liker des posts.
+
+
+ETAPES:
+
+1- Création du serveur: 
+	
+	A-Installation et configuration:
+
+		a- Initialisation du projet avec "npm init" (Ici tu renseigne les informations permettent de décrire le projet à réaliser: package name, version, description, point d'entrer, autheurs...)
+		b- Téléchargement des dépendances utiles pour faire le backend ( Express, dotenv, mongoose, nodemon)
+		c- On se rajoute un script "server" dans le "package.json" qui permettra de lancer le serveur en y associant "nodemon" pour l'actualisation.
+	
+	B- Mise en place du serveur:
+	
+		a- Mise en place des librairies (express,);
+		b- lancement du serveur sur le port 5k (npm run server);
+		c- Création et intégration des routes dans le serveur "server.js";
+			1-Post ("/post" dans server.js et "post.routes.js" dans routes):
+				Utiliser pour faire: 
+				- la récupération "get" avec "res" et un message en dur dans le code;
+				- l'insertion "post" avec "res" et "req"(à travers "req.body.message" pour récupérer le 				contenu envoyer depuis postman ou un autre testeur d'API); Dans notre cas, nous avons envoyé 			un "x-www-form-urlencoded" comportant deux Key (message, author) et deux Value (Yolo men ! On 			dit quoi ?; Kaman Firmin);
+				- la mise à jours "put" avec (ici, on indique l'ID du message dans la route avant de définir l'opération à réalié).
+				-- Liker un post "patch"
+				-- Disliker un post "patch".
+		
+		d- Connexion à la base de donnée MongoDB:
+			1- "sur mongoDB" Google authentification;
+			2- "in SECURITY" define database&Network Access + define user&password settings (in database creation);
+			3- Connect DB to Compass/Shell/VScode/Atlas SQL (Compass).
+			4- Dans le projet, tu crais un fichier db.js "backend/config/db.js" et tu implémente la logique de connexion à la BD.
+			5- Creer un gitignore pour ne pas transferer des fichiers lourds, de sécurité ou autres fichiers importants (redémmarer le serveur pour prendre en compte le fichier ".env").
+
+			6- importé la fonction "connectDB" dans le serveur avant les "middlewares".
+		
+		e- Création du modèle de structure de la base de donnée (schéma);
+		f- Creation des Controlleurs du modèle "post":
+			1- création du controleur "setPosts" pour l'envoi (SET);
+			2- création du controleur "getPosts" pour la récupération (GET);
+			3- création du controleur "editPost" pour la modification (PUT);
+			4- création du controleur "deletePost" pour la supréssion (DELETE);
+			5- création du controleur "likePost" pour la liker (PATCH);
+			6- création du controleur "dislikePost" pour la disliker (PATCH);
+		g- Envoi, récupération, modifcation, supréssion, like/dislike des données dans la BD.
