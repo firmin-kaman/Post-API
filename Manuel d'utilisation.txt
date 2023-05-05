@@ -1,6 +1,12 @@
 Projet: Mise en place d'une API CRUD en JavaScript avec NodeJS:
 
-Il a 06 fonctionnalités:
+Ceci est une API de gestions de publications (post).
+
+Ici nous avons choisis de faire un CRUD pour Manipuler les données dépuis un testeur d'API.
+
+Cet API Javascript permet de manager un post depuis la base de donnée mongoDB (dans notre exemple).
+
+Elle a 06 fonctionnalités (CRUD):
 
  1- Créer un post,
  2- Récupérer un post
@@ -12,4 +18,25 @@ BONUS:
  5- Liker un post
  6- Disliker un post
 
-// Je commenterais ce guide d'utilisation dans les jours à venir, Merci d'avance !
+I- De quoi j'ai eu besoin pour concevoir cette API ?
+
+	a- Express (pour le serveur)
+	b- Dotenv (pour les variables d'environnement)
+	c- mongoose (pour lier a mongoDB)
+	d- nodemon (pour actualiser en live notre serveur).
+
+II- Comment Utiliser cette API ?
+
+Alors là, c'est plutôt simple:
+
+	a- Ouvrez votre projet avec un IDE (exple: Phpstrom, Vscode, Intellij...)
+	b- Lancer le serveur avec la commande: "npm run server" depuis le terminal de votre projet.
+	c- Une fois votre serveur lancer, Utiliser un testeur d'API comme postman et creer les 06 requêtes (CRUD + Bonus ) et rajouter ceci comme variable d'environnement : "http://localhost:5000/post".
+
+III- Comment manipuler le CRUD et les Bonus:
+
+
+
+// Je commenterais ce guide d'utilisation au fur et à mesure dans les jours à venir, Merci d'avance !
+
+vendredi 05-05-23 /// 20:52
