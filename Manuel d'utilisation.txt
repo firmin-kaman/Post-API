@@ -1,4 +1,4 @@
-Projet: Mise en place d'une d'une API CRUD en JavaScript avec NodeJS:
+Projet: Mise en place d'une API CRUD en JavaScript avec NodeJS:
 
 Il a 06 fonctionnalités:
 
